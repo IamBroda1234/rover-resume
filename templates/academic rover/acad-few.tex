@@ -1,47 +1,101 @@
-\documentclass[11pt]{article}
+\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
 
-\usepackage{scholax}
-\usepackage[margin=1in,a4paper]{geometry}
-\setcounter{secnumdepth}{0}
-\usepackage{microtype}
-
-\usepackage{enumitem}
-\setlist[itemize]{nosep,left=0pt..1.5em}
-\setlist[enumerate]{leftmargin=*,labelsep=\parindent,label=[{\arabic*}]}
-
+\usepackage[margin=1in, a4paper]{geometry}
+\setcounter{secnumdepth}{0} % remove section numbering
 \usepackage{titlesec}
-% \titlespacing{\section}{0pt}{*4}{*1}
-\titlespacing{\subsection}{0pt}{*2.5}{-\parskip}
+\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
 \titlespacing{\subsubsection}{0pt}{*0}{*0}
 \titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
-\titleformat*{\subsection}{\large\bfseries}
-\titleformat*{\subsubsection}{\bfseries\itshape}
-
-\usepackage{bibentry}
+\titleformat*{\subsubsection}{\large\itshape}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,left=0pt .. \parindent}
+\pagestyle{empty} % remove page number
+\pdfgentounicode=1
 
 
 \begin{document}
 
+\begin{center}
+	\begin{minipage}{0.49\textwidth}
+    %\raggedright
+		{\LARGE\bfseries
+			IMMANUEL DIETRICH % Name Here
+		} \\ \medskip
+		Bachelor of Science % Title [optional]
+	\end{minipage} \hfill
+	\begin{minipage}{0.5\textwidth}
+		\raggedleft\
+		Email: immanueld49@gmail.com \\
+		Mobile: +49 1512 9081675 \\
+		{\small LinkedIn: linkedin.com/immanuel-dietrich} \\
+	\end{minipage}
+\end{center}
+
 \section{Education}
-%==================
-\subsection{M.Phil. in Mathematics \hfill Jun 2024}
-\subsubsection{Generic University \hfill City, ST}
+%=================%
+\subsection{Utrecht University, Utrecht $|$ {\normalfont\itshape Water Science and Management} \hfill 2026}
 \begin{itemize}
-  \item You can generate a list of your publications from an external \texttt{.bib} file.
-  \item One way is to \verb|\cite{refcode}| in a list. Good for fewer items. Requires only \textit{bibentry} package.
-  \item Another way is to print all items from a \texttt{.bib} file. Could be sub-categorised if required.
+	\item Cumulative GPA: 7,48 (Dutch Grading System)
+  \item Related Coursework: Drinking Water and Sanitation, Sustainable Water Resources Management, Quantitative Water Management
+  \item Thesis: "The use of molecularly imprinted polymers for the removal of per-and polyfluorinated alkyl substances"
 \end{itemize}
 
-\section{Publications}
-%=====================
-\nobibliography{few-ref}
-\bibliographystyle{unsrt}
+\subsection{Bauhaus University, Weimar $|$ {\normalfont\itshape Environmental Engineering} \hfill 2024}
+\begin{itemize}
+	\item Overall Grade: 2.83 (German Grading System)
+  \item Related Coursework: Basic studies in mathmatics and natural sciences; fundamental studies in all applied civil engineering subjects
+  \item Thesis: "Study on the precipitation of organic suspended solids in raw water using the case study of a drinking water treatment plant in Kikinda, Serbia" 
+\end{itemize}
 
-\begin{enumerate}
-  \item \bibentry{vaswani_attention_2023}
-  \item \bibentry{moss_prophylactic_2002}
-  \item \bibentry{zadeh_fuzzy_1965}
-  \item \bibentry{nash_equilibrium_1950}
+\subsection{University of Technology, Vienna $|$ {\normalfont\itshape Erasmus} \hfill 2023}
+\begin{itemize}
+	\item Overall Grade: 1.83 (Austrian Grading System)
+  \item Related Coursework: Laboratory practical on resource and waste management, Ecology, Membrane Technology
+\end{itemize}
+
+\section{Experience}
+%=================%
+\subsection{UNIHA Wasser Technologie GmbH \hfill Linz, Upper Austria}
+\subsubsection{Project Intern \hfill  March 2024 - June 2024}
+\begin{itemize}
+	\item Beginning with your most recent position, describe your experience, skills, and resulting outcomes in bullet or paragraph form.
+	\item Begin each line with an action verb and include details that will help the reader understand your accomplishments, skills, knowledge, abilities, or achievements.
+	\item Quantify where possible. Do not use personal pronouns; each line should be a phrase rather than a full sentence.
+\end{itemize}
+
+\subsection{Position Title \hfill Mar 2020 - Nov 2022}
+\subsubsection{Company XYZ \hfill City, State}
+\begin{itemize}
+	\item XYZ method - Accomplished [X] as measured by [Y], by doing [Z].
+	\item CAR method - Context, Action, Result. 
+	\item STAR method - Situation, Task, Action, Result.
+	\item Be consistent with headers and sub-headers. 
+\end{itemize}
+
+\section{Certification \& Awards}
+%===============================%
+\begin{enumerate}[label=\null, left=0pt..0pt, itemsep=0pt]
+	\item Some programming bootcamp, Location. \hfill 2023
+	\item Forbes Top 15 Procrastinators under 15. \hfill 2022
+	\item Perticipation award for attending workshop. \hfill 2021
 \end{enumerate}
+
+\section{Skills \& Interests}
+%===========================%
+\begin{description}[itemsep=0pt]
+	\item[Technical] List computer software and programming languages
+	\item[Language] List foreign languages and your level of fluency
+	\item[Laboratory] List scientific / research lab techniques or tools [If Applicable]
+	\item[Interests] List activities you enjoy that may spark interview conversation
+\end{description}
+
+\section{Projects}
+%=================
+\subsection{Project Neme $|$ \normalfont\textit{github.com/project-link} \hfill 2019}
+\begin{itemize}
+  \item Tech used, Language, Frameworks etc.
+  \item Implemented ABC feature
+  \item Optimised XYZ by 50\%
+\end{itemize}
 
 \end{document}
