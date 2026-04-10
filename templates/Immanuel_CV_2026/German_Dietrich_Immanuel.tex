@@ -1,0 +1,215 @@
+\documentclass[12pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{tcolorbox}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\selectcolormodel{gray}
+
+% ---------- Colors ----------
+\definecolor{eublue}{RGB}{0, 51, 153}
+\definecolor{euyellow}{RGB}{255, 204, 0}
+\setlength{\headheight}{14pt}
+\definecolor{placeholderbg}{RGB}{255, 248, 220}
+\definecolor{placeholderborder}{RGB}{200, 160, 0}
+\definecolor{sectionbg}{RGB}{230, 236, 255}
+
+% ---------- Section formatting ----------
+\titleformat{\section}
+  {\large\bfseries\color{eublue}}
+  {\thesection.}{0.5em}{}
+  [{\color{euyellow}\titlerule[1.5pt]}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{eublue}}
+  {\thesubsection.}{0.5em}{}
+
+% ---------- Placeholder box ----------
+\tcbset{
+  placeholderbox/.style={
+    colback=placeholderbg,
+    colframe=placeholderborder,
+    fonttitle=\bfseries\small,
+    coltitle=black,
+    arc=3pt,
+    boxrule=1pt,
+    left=6pt, right=6pt, top=4pt, bottom=4pt,
+  }
+}
+
+\newcommand{\insertdoc}[2]{%
+  \begin{tcolorbox}[placeholderbox, title={$\Rightarrow$ #1}]
+    \small\textit{#2}
+  \end{tcolorbox}
+  \vspace{4pt}
+}
+
+% ---------- Header / Footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{eublue}{\textbf{Application Dossier}}}
+\fancyhead[R]{\small\textcolor{eublue}{Immanuel Dietrich}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ==========================================================
+\begin{document}
+% ==========================================================
+
+% ---------- Title Page ----------
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+  {\Huge\bfseries\color{eublue} Application Dossier}\\[1cm]
+  {\large Blue Book Traineeship programme / Administrative Traineeship}\\[0.5cm]
+  {\large Immanuel Dietrich}\\[0.5cm]
+  {\normalsize 07.04.2025}\\[3cm]
+  \hrule height 2pt
+  \vspace{0.3cm}
+  \hrule height 0.5pt
+  \vspace{2cm}
+  {\small This dossier contains all supporting documents required for the application,\\
+  organised according to the official documentation requirements.}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ==========================================================
+\section{Personal Data}
+% ==========================================================
+
+\subsection{Identity Document}
+
+The identity document below proves the nationality declared in the application.
+ 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Application_Docs/ID-card.png}
+    \caption{Identity card}
+    \label{fig:ID_card}
+\end{figure}
+
+\newpage
+ 
+\newpage
+
+% ==========================================================
+\section{Education}
+% ==========================================================
+ 
+% ----------------------------------------------------------
+\subsection{A — Eligibility Criteria: Bachelor's Degree}
+% ----------------------------------------------------------
+\insertdoc{Exmatrikulationsschreiben (Proof of Start of Bachelor's)}{
+  Document proving the start of the Bachelor's degree programme.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/Exmatrikulation_Dezernat-Studium-und-Lehre.pdf}
+ 
+\insertdoc{Bachelor's Diploma (Proof of Completion)}{
+  Diploma confirming successful completion of the Bachelor's degree.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/Bachelor.pdf}
+ 
+% ----------------------------------------------------------
+\subsection{B — Formal Education: Further Completed University Studies}
+% ----------------------------------------------------------
+
+\insertdoc{Proof of Start of Honours Degree}{
+  Document proving enrolment or start of the Honours programme.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/GHIS Programme overview 2024-2025.pdf}
+ 
+\insertdoc{Honours Diploma (Proof of Completion)}{
+  Diploma confirming successful completion of the Honours degree.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/Honours.pdf}
+ 
+% ----------------------------------------------------------
+\subsection{C — Formal Education: Ongoing University Studies}
+% ----------------------------------------------------------
+
+\insertdoc{Declaration of Enrolment}{
+  Declaration confirming enrolment in the current study programme.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/Declaration-of-enrolment_24-25.pdf}
+ 
+\insertdoc{Study Progress Overview}{
+  Document confirming active study status and progress at the time of application.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/Dietrich-SPO.pdf}
+ 
+\newpage
+ 
+% ==========================================================
+\section{Professional Experience (Germany)}
+% ==========================================================
+
+\insertdoc{Proof of 1st Professional Experience}{
+  Document stating the period of work.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/Contract_Weimar_1.pdf}
+
+\insertdoc{Proof of 2nd Professional Experience}{
+  Document stating the period of work.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/Contract_Weimar_2.pdf}
+ 
+\newpage
+ 
+% ==========================================================
+\section{International Experience}
+% ==========================================================
+ 
+\insertdoc{Proof of Start — International Experience 1}{
+  Document confirming the start of the experience.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/Confirmation-of-Arrival.pdf}
+ 
+\insertdoc{Proof of End — International Experience 1 (Date of Last Exam)}{
+  Document showing the date of the last exam, confirming the end of the experience.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/DE_Transcript-of-Record-TU-WIEN.pdf}
+
+\insertdoc{Proof of International Experience 2 (Start and End)}{
+  Single document indicating both the first and last day of the experience.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/Contract_UniHa.pdf}
+ 
+\newpage
+ 
+% ==========================================================
+\section{Languages — Eligibility Criteria}
+% ==========================================================
+ 
+% ----------------------------------------------------------
+\subsection{Language 1: English — [107] (TOEFL)}
+% ----------------------------------------------------------
+ 
+\insertdoc{TOEFL Certificate — English}{
+  TOEFL score report confirming the declared proficiency level in English.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/TOEFL_Certificate.pdf}
+ 
+% ----------------------------------------------------------
+\subsection{Language 2: English — C1 (CAE)}
+% ----------------------------------------------------------
+ 
+\insertdoc{CAE Certificate — English, C1}{
+  Cambridge C1 Advanced (CAE) certificate confirming C1 proficiency in English.
+}
+\includepdf[pages=-, fitpaper=false, scale=0.8, offset=0 -30pt, pagecommand={\thispagestyle{fancy}}]{../Application_Docs/CAE.pdf}
+ 
+\end{document}
